@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #f1f1f1;
+}
+
+$PrimaryColor: #ec1f55;
+$HeaderColor: #ef6d92;
+$ButtonColor: #666666;
+$TextColor: #262626;
+$DarkModeColor: #181818;
+$DarkModeText: #fff;
+$DarkModeBtn: #1ed760;
+
+#container {
+    // height: 100px;
+    width: 480px;
+    margin: auto;
+}
+
+@mixin primarytext {
+    color: $TextColor;
+    font-size: 22px;
+}
+
+@mixin centerDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin resetATag {
+    text-decoration: none;
+    color: $ButtonColor;
+}
+
+.active {
+    background-color: $PrimaryColor !important;
+    color: #fff;
+}
+
+.activeBtn {
+    color: $PrimaryColor !important;
+}
+
+.p-8 {
+    padding: 8px;
+}
+
+.dark-mode {
+    background-color: $DarkModeColor !important;
+    color: $DarkModeText !important;
+
+    &-Text {
+        color: $DarkModeBtn !important;
+    }
+    
+    &-Btn {
+        color: $DarkModeColor !important;
+        background-color: $DarkModeBtn !important;
+    }
+
+    &-BtnToggle {
+        color: $DarkModeText !important;
+    }
+}

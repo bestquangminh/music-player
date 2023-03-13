@@ -1,0 +1,155 @@
+#container {
+    width: 1000%;
+    margin: 456px auto;
+    max-width: 480px;
+}
+.header {
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    width: 100%;
+    max-width: 480px;
+    border-bottom: 1px solid #ccc;
+
+    &__changeMode {
+        top: 0;
+    position: absolute;
+    right: 9px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+        &-spotify {
+            color: #fff;
+            font-size: 22px;
+        }
+    }
+
+    &__title{
+        &-text {
+            display: flex;
+            justify-content: center;
+            padding: 0 0 10px;
+            color: $PrimaryColor
+        }
+
+        
+
+        &-musicname {
+            @include primarytext;
+            @include centerDiv;
+            padding-bottom: 20px;
+        }
+    }
+}
+
+.cd {
+    width: 200px;
+    display: flex;
+    margin: auto;
+    &__thumbnail {
+        width: 100%;
+        padding-top: 100%;
+        border-radius: 50%;
+        background-size: cover;
+    }
+}
+
+.button-controller {
+    display: flex;
+    justify-content: space-around;
+    padding: 18px 0;
+    &__btn {
+        @include resetATag;
+        font-size: 18px;
+        padding: 18px;
+        cursor: pointer;
+        
+    }
+}
+
+.toggle {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: $PrimaryColor;
+    text-align: center;
+    color: #fff;
+}
+
+.progress-controller {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress {
+    width: 100%;
+    -webkit-appearance: none;
+    height: 6px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+  }
+  
+  .progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 6px;
+    background-color: $PrimaryColor;
+    cursor: pointer;
+  }
+
+.music-list {
+    max-width: 456px;
+    margin: auto;
+    
+}
+
+.song {
+    width: 460px;
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-bottom: 10px;
+    &__img {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        margin: 0 8px;
+    }
+
+    &__description {
+        flex: 1;
+    }
+
+    &__menu,&__description {
+        padding: 8px 16px;
+    }
+}
+
+.icon-play {
+    display: none !important;
+}
+
+.playing > .icon-play {
+  display: block !important;
+}
+
+.playing > .icon-pause {
+    display: none !important;
+  }
+
+
