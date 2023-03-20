@@ -40,6 +40,9 @@ body {
 .dark-mode-BtnToggle {
   color: #fff !important;
 }
+.dark-mode-active {
+  background-color: #1ed760 !important;
+}
 
 #container {
   width: 1000%;
@@ -161,6 +164,9 @@ body {
   padding: 8px 16px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   margin-bottom: 10px;
+}
+.song:hover {
+  cursor: pointer;
 }
 .song__img {
   width: 44px;

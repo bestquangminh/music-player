@@ -204,6 +204,14 @@ const app = {
             headerTitle.classList.toggle('dark-mode');
             playButton.classList.toggle('dark-mode-Btn');
             headerText.classList.toggle('dark-mode-Text');
+            for(let i = 0; i<songInfo.length; i++) {
+            songInfo[i].classList.toggle('dark-mode');
+            if(songInfo[i].classList.contains('active')) {
+                songInfo[i].classList.remove('active');
+                songInfo[i].classList.add('dark-mode-active');
+            }
+            }
+            
         })
     },
     loadCurrentSong: function(){

@@ -67,4 +67,8 @@ $DarkModeBtn: #1ed760;
     &-BtnToggle {
         color: $DarkModeText !important;
     }
+
+    &-active {
+        background-color: $DarkModeBtn !important;
+    }
 }
